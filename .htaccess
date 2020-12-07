@@ -1,0 +1,6 @@
+# AddType application/x-httpd-php53 .php
+php_flag magic_quotes_gpc Off
+
+Options +FollowSymLinks
+RewriteEngine On
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)$ /GetChannelsList.php?username=$1&password=$2&type=$3&name=$4 [L
